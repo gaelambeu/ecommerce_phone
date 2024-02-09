@@ -1,6 +1,8 @@
 const NavBar = () => {
     return ( 
-        <div>NavBar</div>
+        <div className="sticky top-0 w-full bg-slate-200 z-30 shadow-sm">
+            NavBar
+        </div>
     );
 }
  
