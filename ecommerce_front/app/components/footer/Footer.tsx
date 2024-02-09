@@ -28,8 +28,12 @@ const Footer = () => {
                         <p className="mb-2">At our electronics store. We are dedicted to providing the latest
                         and greatest devices and accessories to our customers. With a wide
                         selection of phones. TVs. laptops. watches. and accessories.</p>
-                        <p>&copy: {}</p>
+                        <p>&copy: {new Date().getFullYear()}
+                        E-Market. All rights reserved</p>
                     </div>
+                    <FooterList>
+                    <h3 className="text-base font-bold mb-2">Follow Us</h3>
+                    </FooterList>
                 </div>
             </Container>
         </footer>
