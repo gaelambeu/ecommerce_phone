@@ -15,7 +15,7 @@ const HomeBanner = () => {
                 </div>
                 <div className="w-1/3 relative aspect-video">
                     <Image 
-                        src="/temporary.png" 
+                        src="/banner-image.png" 
                         fill 
                         alt="Temporary Image"
                         className="object-contain w-10"
