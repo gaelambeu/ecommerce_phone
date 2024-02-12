@@ -1,5 +1,6 @@
 'use client'
 
+import { formatPrice } from "@/utils/formatPrice";
 import { truncateText } from "@/utils/truncateText";
 import Image from "next/image";
 
@@ -25,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
                 </div>
                 <div></div>
                 <div>{data.reviews.length} reviews</div>
-                <div></div>
+                <div>{formatPrice(data.price)}</div>
             </div>
         </div>
     );
