@@ -1,4 +1,8 @@
-const ProductDetails = () => {
+interface ProductDetailProps{
+    product: any
+}
+
+const ProductDetails:React.FC<ProductDetailProps> = () => {
     return (  
         <div>
             Product
