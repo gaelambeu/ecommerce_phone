@@ -10,7 +10,7 @@ const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
             <div>
                 Images
             </div>
-            <div>details</div>
+            <div className="text-3xl font-medium text-slate-700">{product.name}</div>
         </div>
     );
 }
