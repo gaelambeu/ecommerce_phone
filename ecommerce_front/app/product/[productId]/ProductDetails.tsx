@@ -6,6 +6,10 @@ interface ProductDetailProps{
     product: any
 }
 
+const Horizontal = () => {
+    return <hr className="W-[30%]my-2" />
+}
+
 const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
 
     const productRating = product.reviews.reduce((acc: number, item: any) => 
@@ -25,6 +29,24 @@ const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
                     <Rating value={productRating} readOnly />
                     <div>{product.reviews.length} reviews</div>
                 </div>
+                <Horizontal />
+                <div className="text-justify">{product.description}</div>
+                <Horizontal />
+                <div>
+                    <span className="font-semibold">CATEGORY:</span>{product.category}
+                </div>
+                <div>
+                    <span className="font-semibold">BRAND:</span>{product.brand}
+                </div>
+                <div className={product.inStock ? 'text-teal-400' : 'text-rose-400'}>
+                    {product.inStock ? 'In stock' : 'Out of stock'}
+                </div>
+                <Horizontal />
+                <div>color</div>
+                <Horizontal />
+                <div>quality</div>
+                <Horizontal />
+                <div>add to cart</div>
             </div>
             
         </div>
