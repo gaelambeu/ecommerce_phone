@@ -1,6 +1,7 @@
 'use client';
 
 import { Rating } from "@mui/material";
+import { useState } from "react";
 
 interface ProductDetailProps{
     product: any
@@ -34,6 +35,8 @@ const Horizontal = () => {
 }
 
 const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
+
+    const [CartProduct, setCartProduct]= useState
 
     const productRating = product.reviews.reduce((acc: number, item: any) => 
     item.rating + acc, 0) / 
