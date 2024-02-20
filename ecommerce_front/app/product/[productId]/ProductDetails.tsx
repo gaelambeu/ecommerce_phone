@@ -14,8 +14,17 @@ export type CartProduct = {
     description: string,
     category: string,
     brand: string,
-    selectedImg:
+    selectedImg: SelectedImgType,
+    quantity: number,
+    price: number
 }
+
+export type SelectedImgType = {
+    color: string,
+    colorCode: string,
+    image: string
+}
+
 
 
 
