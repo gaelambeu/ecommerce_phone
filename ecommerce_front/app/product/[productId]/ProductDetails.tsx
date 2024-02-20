@@ -36,7 +36,16 @@ const Horizontal = () => {
 
 const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
 
-    const [CartProduct, setCartProduct]= useState
+    const [CartProduct, setCartProduct]= useState<CartProductType>({
+        id: product.id,
+        name: string,
+        description: string,
+        category: string,
+        brand: string,
+        selectedImg: SelectedImgType,
+        quantity: number,
+        price: number
+    })
 
     const productRating = product.reviews.reduce((acc: number, item: any) => 
     item.rating + acc, 0) / 
