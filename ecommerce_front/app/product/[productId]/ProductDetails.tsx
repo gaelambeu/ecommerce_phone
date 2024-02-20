@@ -9,7 +9,7 @@ interface ProductDetailProps{
 
 
 
-export type CartProduct = {
+export type CartProductType = {
     id: string,
     name: string,
     description: string,
@@ -38,13 +38,13 @@ const ProductDetails:React.FC<ProductDetailProps> = ({ product }) => {
 
     const [CartProduct, setCartProduct]= useState<CartProductType>({
         id: product.id,
-        name: string,
-        description: string,
-        category: string,
-        brand: string,
-        selectedImg: SelectedImgType,
-        quantity: number,
-        price: number
+        name: product.name,
+        description: product.description,
+        category: product.category,
+        brand: product.brand,
+        selectedImg: {...product.image[0]},
+        quantity: 1,
+        price: product.price,
     })
 
     const productRating = product.reviews.reduce((acc: number, item: any) => 
